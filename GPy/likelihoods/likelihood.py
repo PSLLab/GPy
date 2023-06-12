@@ -182,8 +182,8 @@ class Likelihood(Parameterized):
                 res = np.exp(self.logpdf(fi_star, yi, yi_m)
                               - 0.5*np.log(2*np.pi*vi)
                               - 0.5*np.square(fi_star-mi)/vi)
-                if not np.isfinite(res):
-                    import ipdb; ipdb.set_trace()  # XXX BREAKPOINT
+                # if not np.isfinite(res):
+                #     import ipdb; ipdb.set_trace()  # XXX BREAKPOINT
                 return res
 
             return f
